@@ -8,6 +8,13 @@ package Agentes;
  *
  * @author Gustavo
  */
-public class AgenteAvaliacaoLaboratorial {
+public class AgPressaoArterialPAD extends PressaoArterial{
+
+    public AgPressaoArterialPAD(int pressaoSanguineaSistolica, int pressaoSanguineaDiastolica) {
+        super(pressaoSanguineaSistolica, pressaoSanguineaDiastolica);
+    }
+    
+    
+    
     
 }

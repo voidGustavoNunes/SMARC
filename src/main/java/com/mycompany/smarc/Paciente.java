@@ -12,63 +12,12 @@ public class Paciente {
     int id;
     float peso;
     float altura;
-    float imc;
-    boolean abaixoDoPeso = false;
-    boolean pesoNormal = false;
-    boolean pesoLeve = false;
-    boolean obesidadeModerada = false;
-    boolean obesidadeGrave = false;
+    Imc imc;
+
     
     public Paciente() {
     }
 
-    public boolean isAbaixoDoPeso() {
-        return abaixoDoPeso;
-    }
-
-    public void setAbaixoDoPeso(boolean abaixoDoPeso) {
-        this.abaixoDoPeso = abaixoDoPeso;
-    }
-
-    public boolean isPesoNormal() {
-        return pesoNormal;
-    }
-
-    public void setPesoNormal(boolean pesoNormal) {
-        this.pesoNormal = pesoNormal;
-    }
-
-    public boolean isPesoLeve() {
-        return pesoLeve;
-    }
-
-    public void setPesoLeve(boolean pesoLeve) {
-        this.pesoLeve = pesoLeve;
-    }
-
-    public boolean isObesidadeModerada() {
-        return obesidadeModerada;
-    }
-
-    public void setObesidadeModerada(boolean obesidadeModerada) {
-        this.obesidadeModerada = obesidadeModerada;
-    }
-
-    public boolean isObesidadeGrave() {
-        return obesidadeGrave;
-    }
-
-    public void setObesidadeGrave(boolean obesidadeGrave) {
-        this.obesidadeGrave = obesidadeGrave;
-    }
-
-    public float getImc() {
-        return imc;
-    }
-
-    public void setImc(float imc) {
-        this.imc = imc;
-    }
     
 
     public Paciente(float peso, float altura) {
@@ -82,6 +31,15 @@ public class Paciente {
         this.altura = altura;
     }
 
+    public Imc getImc() {
+        return imc;
+    }
+
+    public void setImc(Imc imc) {
+        this.imc = imc;
+    }
+
+    
     public int getId() {
         return id;
     }
