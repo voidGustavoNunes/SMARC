@@ -13,9 +13,27 @@ public class Paciente {
     float peso;
     float altura;
     Imc imc;
-
+    boolean hipertenso = false;
+    float sedentario;
     
     public Paciente() {
+    }
+
+    public float getSedentario() {
+        return sedentario;
+    }
+
+    public void setSedentario(float sedentario) {
+        this.sedentario = sedentario;
+    }
+
+    
+    public boolean isHipertenso() {
+        return hipertenso;
+    }
+
+    public void setHipertenso(boolean hipertenso) {
+        this.hipertenso = hipertenso;
     }
 
     
