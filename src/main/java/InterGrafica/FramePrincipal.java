@@ -69,7 +69,7 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         boxPeso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "65", "75", "85", "95", "105" }));
 
-        boxAltura.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "165", "175", "185", "195", "205" }));
+        boxAltura.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1.65", "1.75", "1.85", "1.95", "2.05" }));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -329,8 +329,8 @@ public class FramePrincipal extends javax.swing.JFrame {
 
     private void btnEnviarFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarFormActionPerformed
         //  PACIENTE
-        int peso = Integer.parseInt((String) boxPeso.getSelectedItem());
-        int altura = Integer.parseInt((String) boxAltura.getSelectedItem());
+        float peso = Float.parseFloat((String) boxPeso.getSelectedItem());
+        float altura = Float.parseFloat((String) boxAltura.getSelectedItem());
         //  ATIVIDADE FÍSICA
         int qtdAtvFísica = Integer.parseInt((String) boxAtvFisica.getSelectedItem());
         //  PAS & PAD
@@ -344,11 +344,11 @@ public class FramePrincipal extends javax.swing.JFrame {
         int qt5 = boxQtb5.getSelectedIndex();
         int qt6 = boxQtb6.getSelectedIndex();
         
-        System.out.println(peso+"peso");
-        System.out.println(altura+"altura");
-        System.out.println(qtdAtvFísica+"qtdF");
-        System.out.println(pas+"pas");
-        System.out.println(pad+"pad");
+        System.out.println(peso+" peso");
+        System.out.println(altura+" altura");
+        System.out.println(qtdAtvFísica+" qtdF");
+        System.out.println(pas+" pas");
+        System.out.println(pad+" pad");
     }//GEN-LAST:event_btnEnviarFormActionPerformed
 
     /**

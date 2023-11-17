@@ -151,11 +151,11 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="5">
-                <StringItem index="0" value="165"/>
-                <StringItem index="1" value="175"/>
-                <StringItem index="2" value="185"/>
-                <StringItem index="3" value="195"/>
-                <StringItem index="4" value="205"/>
+                <StringItem index="0" value="1.65"/>
+                <StringItem index="1" value="1.75"/>
+                <StringItem index="2" value="1.85"/>
+                <StringItem index="3" value="1.95"/>
+                <StringItem index="4" value="2.05"/>
               </StringArray>
             </Property>
           </Properties>
