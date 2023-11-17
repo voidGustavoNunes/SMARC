@@ -100,35 +100,35 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Questionário Tabagismo"));
 
-        boxQtb1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dentro de 5 minutos", "Entre 6 e 30 minutos", "Entre 31 e 60 minutos ", "Após 60 minutos " }));
+        boxQtb1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dentro de 5 minutos (0)", "Entre 6 e 30 minutos (1)", "Entre 31 e 60 minutos (2)", "Após 60 minutos (3)" }));
 
         jLabel4.setText("<html>1. Quanto tempo após acordar você fuma seu <br> primeiro cigarro?</html>");
 
-        boxQtb2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sim", "Não" }));
+        boxQtb2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sim (0)", "Não (1)" }));
 
         jLabel5.setText("<html>2. Você acha difícil não fumar em lugares proibidos <br> tais como igrejas, cinemas, ônibus? <html>");
         jLabel5.setToolTipText("");
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        boxQtb3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "O primeiro da manhã", "Outros" }));
+        boxQtb3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "O primeiro da manhã (0)", "Outros (1)" }));
 
         jLabel6.setText("3. Qual cigarro do dia lhe dá mais satisfação? ");
         jLabel6.setToolTipText("");
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        boxQtb4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Menos de 10", "De 11 a 20", "De 21 a 30", "Mais de 31" }));
+        boxQtb4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Menos de 10 (0)", "De 11 a 20 (1)", "De 21 a 30 (2)", "Mais de 31 (3)" }));
 
         jLabel7.setText("4. Quantos cigarros fuma por dia? ");
         jLabel7.setToolTipText("");
         jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        boxQtb5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sim", "Não" }));
+        boxQtb5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sim (0)", "Não (1)" }));
 
         jLabel8.setText("5. Você fuma mais frequentemente pela manhã?");
         jLabel8.setToolTipText("");
         jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        boxQtb6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sim", "Não" }));
+        boxQtb6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sim (0)", "Não (1)" }));
 
         jLabel12.setText("<html>6. Você fuma mesmo doente, quando precisa <br> ficar de cama a maior parte do tempo?<html>");
         jLabel12.setToolTipText("");
@@ -271,6 +271,11 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         btnEnviarForm.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnEnviarForm.setText("Enviar");
+        btnEnviarForm.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEnviarFormActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -321,6 +326,30 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnEnviarFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarFormActionPerformed
+        //  PACIENTE
+        int peso = Integer.parseInt((String) boxPeso.getSelectedItem());
+        int altura = Integer.parseInt((String) boxAltura.getSelectedItem());
+        //  ATIVIDADE FÍSICA
+        int qtdAtvFísica = Integer.parseInt((String) boxAtvFisica.getSelectedItem());
+        //  PAS & PAD
+        int pas = Integer.parseInt((String) boxPAS.getSelectedItem());
+        int pad = Integer.parseInt((String) boxPAD.getSelectedItem());
+        //  QUESTIONÁRIO TABAGISMO
+        int qt1 = boxQtb1.getSelectedIndex();
+        int qt2 = boxQtb2.getSelectedIndex();
+        int qt3 = boxQtb3.getSelectedIndex();
+        int qt4 = boxQtb4.getSelectedIndex();
+        int qt5 = boxQtb5.getSelectedIndex();
+        int qt6 = boxQtb6.getSelectedIndex();
+        
+        System.out.println(peso+"peso");
+        System.out.println(altura+"altura");
+        System.out.println(qtdAtvFísica+"qtdF");
+        System.out.println(pas+"pas");
+        System.out.println(pad+"pad");
+    }//GEN-LAST:event_btnEnviarFormActionPerformed
 
     /**
      * @param args the command line arguments

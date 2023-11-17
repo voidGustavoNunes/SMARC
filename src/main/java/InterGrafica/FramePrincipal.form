@@ -247,10 +247,10 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
-                <StringItem index="0" value="Dentro de 5 minutos"/>
-                <StringItem index="1" value="Entre 6 e 30 minutos"/>
-                <StringItem index="2" value="Entre 31 e 60 minutos "/>
-                <StringItem index="3" value="Ap&#xf3;s 60 minutos "/>
+                <StringItem index="0" value="Dentro de 5 minutos (0)"/>
+                <StringItem index="1" value="Entre 6 e 30 minutos (1)"/>
+                <StringItem index="2" value="Entre 31 e 60 minutos (2)"/>
+                <StringItem index="3" value="Ap&#xf3;s 60 minutos (3)"/>
               </StringArray>
             </Property>
           </Properties>
@@ -267,8 +267,8 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
-                <StringItem index="0" value="Sim"/>
-                <StringItem index="1" value="N&#xe3;o"/>
+                <StringItem index="0" value="Sim (0)"/>
+                <StringItem index="1" value="N&#xe3;o (1)"/>
               </StringArray>
             </Property>
           </Properties>
@@ -289,8 +289,8 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
-                <StringItem index="0" value="O primeiro da manh&#xe3;"/>
-                <StringItem index="1" value="Outros"/>
+                <StringItem index="0" value="O primeiro da manh&#xe3; (0)"/>
+                <StringItem index="1" value="Outros (1)"/>
               </StringArray>
             </Property>
           </Properties>
@@ -311,10 +311,10 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="4">
-                <StringItem index="0" value="Menos de 10"/>
-                <StringItem index="1" value="De 11 a 20"/>
-                <StringItem index="2" value="De 21 a 30"/>
-                <StringItem index="3" value="Mais de 31"/>
+                <StringItem index="0" value="Menos de 10 (0)"/>
+                <StringItem index="1" value="De 11 a 20 (1)"/>
+                <StringItem index="2" value="De 21 a 30 (2)"/>
+                <StringItem index="3" value="Mais de 31 (3)"/>
               </StringArray>
             </Property>
           </Properties>
@@ -335,8 +335,8 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
-                <StringItem index="0" value="Sim"/>
-                <StringItem index="1" value="N&#xe3;o"/>
+                <StringItem index="0" value="Sim (0)"/>
+                <StringItem index="1" value="N&#xe3;o (1)"/>
               </StringArray>
             </Property>
           </Properties>
@@ -357,8 +357,8 @@
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
               <StringArray count="2">
-                <StringItem index="0" value="Sim"/>
-                <StringItem index="1" value="N&#xe3;o"/>
+                <StringItem index="0" value="Sim (0)"/>
+                <StringItem index="1" value="N&#xe3;o (1)"/>
               </StringArray>
             </Property>
           </Properties>
@@ -559,6 +559,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Enviar"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEnviarFormActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>
