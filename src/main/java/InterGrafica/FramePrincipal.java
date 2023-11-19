@@ -4,18 +4,32 @@
  */
 package InterGrafica;
 
+import com.mycompany.smarc.Programa;
+
 /**
  *
  * @author Gustavo
  */
 public class FramePrincipal extends javax.swing.JFrame {
 
+    private Programa programa = new Programa();
+    private double peso;
+    private double altura;
+    private int qtdAtividadeFisica;
+    private int pressaoSistolica;
+    private int pressaoDiastolica;
+    private boolean dificilNaoFumarLocalProibido;
+    private boolean fumaMaisFrequenteManha;
+    private boolean fumaMesmoDoente;
+    private int qualCigarroDoDiaMaisSatisfacao;
+    private int quantosCigarrosFumaDiariamente;
+    private int minutosAposAcordarPrimeiroCigarro;
+
     /**
      * Creates new form FramePrincipal
      */
     public FramePrincipal() {
         initComponents();
-        txtAvaliacao.setText("Resultado bom/ruim");
     }
 
     /**
@@ -33,18 +47,18 @@ public class FramePrincipal extends javax.swing.JFrame {
         boxPeso = new javax.swing.JComboBox<>();
         boxAltura = new javax.swing.JComboBox<>();
         jPanel2 = new javax.swing.JPanel();
-        boxQtb1 = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
         boxQtb2 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
-        boxQtb3 = new javax.swing.JComboBox<>();
         jLabel6 = new javax.swing.JLabel();
-        boxQtb4 = new javax.swing.JComboBox<>();
         jLabel7 = new javax.swing.JLabel();
         boxQtb5 = new javax.swing.JComboBox<>();
         jLabel8 = new javax.swing.JLabel();
         boxQtb6 = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
+        txtCigarrosDia = new javax.swing.JTextField();
+        txtMinutosCigarro = new javax.swing.JTextField();
+        txtCigarroSatisfacao = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -100,8 +114,6 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Questionário Tabagismo"));
 
-        boxQtb1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dentro de 5 minutos (0)", "Entre 6 e 30 minutos (1)", "Entre 31 e 60 minutos (2)", "Após 60 minutos (3)" }));
-
         jLabel4.setText("<html>1. Quanto tempo após acordar você fuma seu <br> primeiro cigarro?</html>");
 
         boxQtb2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sim (0)", "Não (1)" }));
@@ -110,13 +122,9 @@ public class FramePrincipal extends javax.swing.JFrame {
         jLabel5.setToolTipText("");
         jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        boxQtb3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "O primeiro da manhã (0)", "Outros (1)" }));
-
         jLabel6.setText("3. Qual cigarro do dia lhe dá mais satisfação? ");
         jLabel6.setToolTipText("");
         jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-
-        boxQtb4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Menos de 10 (0)", "De 11 a 20 (1)", "De 21 a 30 (2)", "Mais de 31 (3)" }));
 
         jLabel7.setText("4. Quantos cigarros fuma por dia? ");
         jLabel7.setToolTipText("");
@@ -134,6 +142,12 @@ public class FramePrincipal extends javax.swing.JFrame {
         jLabel12.setToolTipText("");
         jLabel12.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
+        txtCigarrosDia.setText("1");
+
+        txtMinutosCigarro.setText("1");
+
+        txtCigarroSatisfacao.setText("1");
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -141,20 +155,23 @@ public class FramePrincipal extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(boxQtb1, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(boxQtb2, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(boxQtb3, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel6))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(txtMinutosCigarro, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.LEADING))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(txtCigarroSatisfacao, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(boxQtb4, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7)
                     .addComponent(boxQtb5, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel8)
                     .addComponent(boxQtb6, javax.swing.GroupLayout.PREFERRED_SIZE, 216, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(txtCigarrosDia, javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -163,31 +180,31 @@ public class FramePrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(boxQtb1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel7)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(boxQtb4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(txtCigarrosDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(txtMinutosCigarro, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(6, 6, 6)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel8)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(boxQtb5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(boxQtb6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(boxQtb6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(txtCigarroSatisfacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(boxQtb2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(boxQtb3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel6)))
                 .addContainerGap(24, Short.MAX_VALUE))
         );
 
@@ -329,26 +346,25 @@ public class FramePrincipal extends javax.swing.JFrame {
 
     private void btnEnviarFormActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEnviarFormActionPerformed
         //  PACIENTE
-        float peso = Float.parseFloat((String) boxPeso.getSelectedItem());
-        float altura = Float.parseFloat((String) boxAltura.getSelectedItem());
+        peso = Float.parseFloat((String) boxPeso.getSelectedItem());
+        altura = Float.parseFloat((String) boxAltura.getSelectedItem());
         //  ATIVIDADE FÍSICA
-        int qtdAtvFísica = Integer.parseInt((String) boxAtvFisica.getSelectedItem());
+        qtdAtividadeFisica = Integer.parseInt((String) boxAtvFisica.getSelectedItem());
         //  PAS & PAD
-        int pas = Integer.parseInt((String) boxPAS.getSelectedItem());
-        int pad = Integer.parseInt((String) boxPAD.getSelectedItem());
+        pressaoSistolica = Integer.parseInt((String) boxPAS.getSelectedItem());
+        pressaoDiastolica = Integer.parseInt((String) boxPAD.getSelectedItem());
+
         //  QUESTIONÁRIO TABAGISMO
-        int qt1 = boxQtb1.getSelectedIndex();
-        int qt2 = boxQtb2.getSelectedIndex();
-        int qt3 = boxQtb3.getSelectedIndex();
-        int qt4 = boxQtb4.getSelectedIndex();
-        int qt5 = boxQtb5.getSelectedIndex();
-        int qt6 = boxQtb6.getSelectedIndex();
-        
-        System.out.println(peso+" peso");
-        System.out.println(altura+" altura");
-        System.out.println(qtdAtvFísica+" qtdF");
-        System.out.println(pas+" pas");
-        System.out.println(pad+" pad");
+        minutosAposAcordarPrimeiroCigarro = Integer.parseInt(txtMinutosCigarro.getText());
+        dificilNaoFumarLocalProibido = boxQtb2.getSelectedIndex() == 0;
+        qualCigarroDoDiaMaisSatisfacao = Integer.parseInt(txtCigarroSatisfacao.getText());
+        quantosCigarrosFumaDiariamente = Integer.parseInt(txtCigarrosDia.getText());
+        fumaMaisFrequenteManha = boxQtb5.getSelectedIndex() == 0;
+        fumaMesmoDoente = boxQtb6.getSelectedIndex() == 0;
+
+        txtAvaliacao.setText(programa.gerarSmarc(peso, altura, qtdAtividadeFisica, pressaoSistolica, pressaoDiastolica,
+                dificilNaoFumarLocalProibido, fumaMaisFrequenteManha, fumaMesmoDoente, qualCigarroDoDiaMaisSatisfacao,
+                quantosCigarrosFumaDiariamente, minutosAposAcordarPrimeiroCigarro));
     }//GEN-LAST:event_btnEnviarFormActionPerformed
 
     /**
@@ -392,10 +408,7 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> boxPAD;
     private javax.swing.JComboBox<String> boxPAS;
     private javax.swing.JComboBox<String> boxPeso;
-    private javax.swing.JComboBox<String> boxQtb1;
     private javax.swing.JComboBox<String> boxQtb2;
-    private javax.swing.JComboBox<String> boxQtb3;
-    private javax.swing.JComboBox<String> boxQtb4;
     private javax.swing.JComboBox<String> boxQtb5;
     private javax.swing.JComboBox<String> boxQtb6;
     private javax.swing.JButton btnEnviarForm;
@@ -417,5 +430,8 @@ public class FramePrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea txtAvaliacao;
+    private javax.swing.JTextField txtCigarroSatisfacao;
+    private javax.swing.JTextField txtCigarrosDia;
+    private javax.swing.JTextField txtMinutosCigarro;
     // End of variables declaration//GEN-END:variables
 }

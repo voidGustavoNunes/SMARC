@@ -4,39 +4,39 @@
  */
 package Agentes;
 
-import com.mycompany.smarc.Paciente;
-
 /**
  *
  * @author Gustavo
  */
 public class AgVidaSedentaria {
-
-    public AgVidaSedentaria() {
+    
+    private int freqAtividadeFisicaSemanal;
+    
+    public void setFreqAtividadeFisicaSemanal(int frequencia){
+        freqAtividadeFisicaSemanal = frequencia;
     }
     
-    
-    public void diagnosticoVidaSedentaria(Paciente paciente, int qntdeAtividadesFisicas){
+    public double geraSaida(){
+        double saida;
         
-        if(qntdeAtividadesFisicas >= 4){
-            paciente.setSedentario(0);
-        
-        }else if(qntdeAtividadesFisicas == 3){
-            paciente.setSedentario((float) 0.25);
-            
+        switch (freqAtividadeFisicaSemanal) {
+            case 0:
+                saida = 1;
+                break;
+            case 1:
+                saida = 0.75;
+                break;
+            case 2:
+                saida = 0.5;
+                break;
+            case 3:
+                saida = 0.25;
+                break;
+            default:
+                saida = 0;
+                break;
         }
-        else if(qntdeAtividadesFisicas == 2){
-            paciente.setSedentario((float) 0.5);
         
-        }
-        else if(qntdeAtividadesFisicas == 1){
-            paciente.setSedentario((float) 0.25);
-        }
-        else if(qntdeAtividadesFisicas == 0){
-            paciente.setSedentario((float) 1.00);
-        }
-        
-        
+        return saida;
     }
-    
 }
