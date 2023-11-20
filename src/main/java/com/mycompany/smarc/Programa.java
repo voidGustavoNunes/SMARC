@@ -24,7 +24,15 @@ public class Programa {
 
         // Concatenando os resultados em uma string
         StringBuilder resultado = new StringBuilder();
-        resultado.append("Risco Cardíaco (obesidade): ").append(riscoObesidade).append("\n");
+        if (riscoObesidade == 0.0) {
+            resultado.append("Risco Cardíaco (obesidade): ").append(riscoObesidade).append(" -> O paciente está com peso normal").append("\n");
+        }
+        else if (riscoObesidade == 1.0) {
+            resultado.append("Risco Cardíaco (obesidade): ").append(riscoObesidade).append(" - O paciente está com obesidade grave").append("\n");
+        }
+        else {
+            resultado.append("Risco Cardíaco (obesidade): ").append(riscoObesidade).append(" - O paciente está com sobrepeso").append("\n");
+        }
 
         AgPressaoArterial sisto = new AgPressaoArterial();
         sisto.setPressao(pressaoSistolica); // 135
@@ -59,11 +67,13 @@ public class Programa {
 
         AgAvaliador aval = new AgAvaliador(0.65);
         aval.setRiscoObesidade(riscoObesidade);
+        
+        
         aval.setRiscoPressaoDiastolica(riscoPressaoDiastolica);
         aval.setRiscoPressaoSistolica(riscoPressaoSistolica);
         aval.setRiscoSedentarismo(riscoSedentarismo);
         aval.setRiscoTabagismo(riscoTabagista);
-
+        
         resultado.append(aval.avaliacao());
         
         return resultado.toString();
