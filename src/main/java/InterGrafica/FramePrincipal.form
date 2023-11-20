@@ -182,14 +182,10 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Component id="boxQtb2" alignment="0" min="-2" pref="216" max="-2" attributes="0"/>
                       <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="txtMinutosCigarro" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel4" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="txtCigarroSatisfacao" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel6" alignment="0" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jSpinnerTempoPrimeiroCigarro" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
+                      <Component id="jSpinnerQualCigarro" alignment="0" min="-2" pref="83" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
@@ -197,10 +193,8 @@
                       <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
                       <Component id="boxQtb6" alignment="0" min="-2" pref="216" max="-2" attributes="0"/>
                       <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
-                      <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
-                          <Component id="txtCigarrosDia" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel7" alignment="0" max="32767" attributes="0"/>
-                      </Group>
+                      <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                      <Component id="jSpinnerQuantosCigarros" alignment="0" min="-2" pref="79" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -213,16 +207,18 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtCigarrosDia" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="22" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="0" attributes="0">
                           <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jSpinnerTempoPrimeiroCigarro" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jSpinnerQuantosCigarros" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Component id="txtMinutosCigarro" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
                           <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
@@ -231,10 +227,7 @@
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="boxQtb6" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="txtCigarroSatisfacao" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="boxQtb6" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" attributes="0">
                           <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
@@ -242,9 +235,11 @@
                           <Component id="boxQtb2" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
                           <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jSpinnerQualCigarro" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <EmptySpace pref="24" max="32767" attributes="0"/>
+                  <EmptySpace pref="18" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -273,7 +268,7 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;2. Voc&#xea; acha dif&#xed;cil n&#xe3;o fumar em lugares proibidos &lt;br&gt; tais como igrejas, cinemas, &#xf4;nibus? &lt;html&gt;"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Padr&#xe3;o"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
         </Component>
@@ -282,7 +277,7 @@
             <Property name="text" type="java.lang.String" value="3. Qual cigarro do dia lhe d&#xe1; mais satisfa&#xe7;&#xe3;o? "/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Padr&#xe3;o"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
         </Component>
@@ -291,7 +286,7 @@
             <Property name="text" type="java.lang.String" value="4. Quantos cigarros fuma por dia? "/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Padr&#xe3;o"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
         </Component>
@@ -313,7 +308,7 @@
             <Property name="text" type="java.lang.String" value="5. Voc&#xea; fuma mais frequentemente pela manh&#xe3;?"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Padr&#xe3;o"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
         </Component>
@@ -335,24 +330,15 @@
             <Property name="text" type="java.lang.String" value="&lt;html&gt;6. Voc&#xea; fuma mesmo doente, quando precisa &lt;br&gt; ficar de cama a maior parte do tempo?&lt;html&gt;"/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
             <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
-              <Color id="Cursor Padr&#xe3;o"/>
+              <Color id="Default Cursor"/>
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtCigarrosDia">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
+        <Component class="javax.swing.JSpinner" name="jSpinnerTempoPrimeiroCigarro">
         </Component>
-        <Component class="javax.swing.JTextField" name="txtMinutosCigarro">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
+        <Component class="javax.swing.JSpinner" name="jSpinnerQuantosCigarros">
         </Component>
-        <Component class="javax.swing.JTextField" name="txtCigarroSatisfacao">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="1"/>
-          </Properties>
+        <Component class="javax.swing.JSpinner" name="jSpinnerQualCigarro">
         </Component>
       </SubComponents>
     </Container>
