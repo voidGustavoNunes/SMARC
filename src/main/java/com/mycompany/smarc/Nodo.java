@@ -40,20 +40,23 @@ public class Nodo {
         if(gct >= vscct) s = "INCONSISTENTE ";
         if(gct <= vicct) s = "INDETERMINADO ";
         
-        if((gc >= 0) && (gc < vscc)) 
-            if((gct >= 0) && (gct < vscct)) 
+        if((gc >= 0) && (gc < vscc)) {
+            if((gct >= 0) && (gct < vscct)) {
                 if(gc >= gct) s = "QUASE VERDADE --> INCONSISTENTE ";
                 else s = "INCONSISTENTE --> VERDADEIRO ";
-            else if((gct <= 0) && (gct > vicct)) 
+            }else if((gct <= 0) && (gct > vicct)) {
                      if((gc > gct) || (gc > (gct * -1))) s = "QUASE VERDADE --> INDETERMINADO ";
                      else s = "INDETERMINADO --> VERDADEIRO ";
-            else if((gc <= 0) && (gc > vicc))
-                    if((gct <= 0) && (gct > vicct)) 
+            }else if((gc <= 0) && (gc > vicc)){
+                    if((gct <= 0) && (gct > vicct)) {
                         if(modulo(gc) >= modulo(gct))s = "QUASE FALSO --> INDETERMINADO ";
                         else s = "INDETERMINADO --> FALSO";
-                    else if((gct >= 0) && (gct < vscct)) 
+                    }else if((gct >= 0) && (gct < vscct)) {
                              if(modulo(gc) > gct) s = "QUASE FALSO --> INCONSISTENTE ";
                              else s = "INCONSISTENTE --> FALSO ";
+                    }
+            }
+        }
         
         s = s + "Gc: "+gc+"   Gct: "+gct;
         return s;    
