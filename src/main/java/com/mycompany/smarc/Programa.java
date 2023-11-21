@@ -4,6 +4,7 @@ import Agentes.AgNicotina;
 import Agentes.AgObesi;
 import Agentes.AgPressaoArterial;
 import Agentes.AgVidaSedentaria;
+import InterGrafica.FramePrincipal;
 
 public class Programa { 
 
@@ -95,8 +96,11 @@ public class Programa {
         }
 
         resultado.append("\nUsando LOGICA PARACONSISTENTE: \n");
-
-        AgAvaliador aval = new AgAvaliador(0.65);
+        
+        FramePrincipal frame = new FramePrincipal();
+        double valor = frame.getAvaliacaoMedico();
+        
+        AgAvaliador aval = new AgAvaliador(valor);
         aval.setRiscoObesidade(riscoObesidade);
         
         
