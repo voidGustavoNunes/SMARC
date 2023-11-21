@@ -152,7 +152,7 @@ public class FramePrincipal extends javax.swing.JFrame {
 
         jLabel13.setText("Avaliação do Médico:");
 
-        jSpinnerAvaliacaoMedico.setModel(new javax.swing.SpinnerNumberModel(0.0d, 0.0d, 1.0d, 1.0d));
+        jSpinnerAvaliacaoMedico.setModel(new javax.swing.SpinnerNumberModel(0.0d, 0.0d, 1.0d, 0.1d));
         jSpinnerAvaliacaoMedico.setAutoscrolls(true);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -363,7 +363,6 @@ public class FramePrincipal extends javax.swing.JFrame {
         altura = Float.parseFloat((String) boxAltura.getSelectedItem());
         //  ATIVIDADE FÍSICA
         qtdAtividadeFisica = Integer.parseInt((String) boxAtvFisica.getSelectedItem());
-        System.out.println(qtdAtividadeFisica);
         //  PAS & PAD
         pressaoSistolica = Integer.parseInt((String) boxPAS.getSelectedItem());
         pressaoDiastolica = Integer.parseInt((String) boxPAD.getSelectedItem());
@@ -377,6 +376,7 @@ public class FramePrincipal extends javax.swing.JFrame {
         fumaMesmoDoente = boxQtb6.getSelectedIndex() == 0;
         
         double valor = getAvaliacaoMedico();
+        System.out.println(valor);
 
         txtAvaliacao.setText(programa.gerarSmarc(peso, altura, qtdAtividadeFisica, pressaoSistolica, pressaoDiastolica,
                 dificilNaoFumarLocalProibido, fumaMaisFrequenteManha, fumaMesmoDoente, qualCigarroDoDiaMaisSatisfacao,
