@@ -29,10 +29,10 @@ public class Programa {
             resultado.append("Risco Cardíaco (obesidade): ").append(riscoObesidade).append(" = O paciente está com peso normal").append("\n");
         }
         else if (riscoObesidade == 1.0) {
-            resultado.append("Risco Cardíaco (obesidade): ").append(riscoObesidade).append(" = O paciente está com obesidade grave").append("\n");
+            resultado.append("Risco Cardíaco (obesidade): ").append(riscoObesidade).append(" = O paciente está com obesidade grave, faça dieta com um nutricionista").append("\n");
         }
         else {
-            resultado.append("Risco Cardíaco (obesidade): ").append(riscoObesidade).append(" = O paciente está com sobrepeso").append("\n");
+            resultado.append("Risco Cardíaco (obesidade): ").append(riscoObesidade).append(" = O paciente está com sobrepeso, procure um médico especialista").append("\n");
         }
 
         AgPressaoArterial sisto = new AgPressaoArterial();
@@ -50,10 +50,10 @@ public class Programa {
             resultado.append("\t = O paciente tem pressão arterial normal\n");
         }
         else if (riscoPressaoSistolica == 1.0 && riscoPressaoDiastolica == 1.0) {
-            resultado.append("\t = O paciente tem pressão arterial elevada\n");
+            resultado.append("\t = O paciente tem pressão arterial elevada, procure um posto de saúde\n");
         }
         else {
-            resultado.append("\t = O paciente tem pressão arterial média\n");
+            resultado.append("\t = O paciente tem pressão arterial baixa\n");
         }
 
         AgVidaSedentaria seden = new AgVidaSedentaria();
@@ -61,13 +61,13 @@ public class Programa {
         riscoSedentarismo = seden.geraSaida();
         
         if (riscoSedentarismo == 0.0) {
-            resultado.append("\nRisco Cardíaco (Sedentarismo): ").append(riscoSedentarismo).append(" = O paciente tem vida saudável").append("\n");
+            resultado.append("\nRisco Cardíaco (Sedentarismo): ").append(riscoSedentarismo).append(" = O paciente está fazendo exercicios regurlarmente").append("\n");
         }
         else if (riscoSedentarismo == 1.0) {
-            resultado.append("\nRisco Cardíaco (Sedentarismo): ").append(riscoSedentarismo).append(" = O paciente tem vida obesidade grave").append("\n");
+            resultado.append("\nRisco Cardíaco (Sedentarismo): ").append(riscoSedentarismo).append(" = O paciente tem vida obesidade grave, procure um médico urgente!").append("\n");
         }
         else {
-            resultado.append("\nRisco Cardíaco (Sedentarismo): ").append(riscoSedentarismo).append(" = O paciente tem vida sedentária").append("\n");
+            resultado.append("\nRisco Cardíaco (Sedentarismo): ").append(riscoSedentarismo).append(" = O paciente tem vida sedentária, faça exercícios").append("\n");
         }
 
         AgNicotina tabac = new AgNicotina();
@@ -83,16 +83,16 @@ public class Programa {
             resultado.append("\nRisco Cardíaco (Tabagismo): ").append(riscoTabagista).append(" = O paciente tem baixa dependência de nicotina").append("\n");
         }
         if (riscoTabagista == 0.25) {
-            resultado.append("\nRisco Cardíaco (Tabagismo): ").append(riscoTabagista).append(" = O paciente exibe sinais de dependência de nicotina").append("\n");
+            resultado.append("\nRisco Cardíaco (Tabagismo): ").append(riscoTabagista).append(" = O paciente exibe sinais de dependência de nicotina, procure um medico").append("\n");
         }
         if (riscoTabagista == 0.5) {
-            resultado.append("\nRisco Cardíaco (Tabagismo): ").append(riscoTabagista).append(" = O paciente é dependente moderado de nicotina").append("\n");
+            resultado.append("\nRisco Cardíaco (Tabagismo): ").append(riscoTabagista).append(" = O paciente é dependente moderado de nicotina, pare de fumar").append("\n");
         }
         if (riscoTabagista == 0.75) {
-            resultado.append("\nRisco Cardíaco (Tabagismo): ").append(riscoTabagista).append(" = O paciente é dependente de nicotina").append("\n");
+            resultado.append("\nRisco Cardíaco (Tabagismo): ").append(riscoTabagista).append(" = O paciente é dependente de nicotina, cuidado, sua vida está em risco, pare de fumar").append("\n");
         }
         if (riscoTabagista == 1.0) {
-            resultado.append("\nRisco Cardíaco (Tabagismo): ").append(riscoTabagista).append(" = O paciente é dependente grave de nicotina").append("\n");
+            resultado.append("\nRisco Cardíaco (Tabagismo): ").append(riscoTabagista).append(" = O paciente é dependente grave de nicotina, pare imediatamente de fumar!").append("\n");
         }
 
         resultado.append("\nUsando LOGICA PARACONSISTENTE: \n");
